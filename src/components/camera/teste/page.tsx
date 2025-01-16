@@ -17,6 +17,7 @@ export default function Teste() {
 
   return (
     <div>
+      <h1 className="text-2xl font-bold mb-4">Custom Camera Component - Test 1</h1>
       <CustomCamera
         ref={cameraRef}
         getAllVideoDevices={(devices: MediaDeviceInfo[]) => setDevices(devices)}
