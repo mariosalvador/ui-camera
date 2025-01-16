@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef, useState } from "react";
 import Image from "next/image";
-import CustomCamera from "../camera";
+import CustomCamera from "../../camera";
 
 export default function Teste() {
   const [getDevices, setDevices] = useState<MediaDeviceInfo[]>([]);

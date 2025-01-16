@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
-import CustomCamera from "../camera";
+import CustomCamera from "../../camera";
 
 export const Teste2: React.FC = () => {
   const cameraRef = useRef<{
