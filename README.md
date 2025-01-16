@@ -16,7 +16,7 @@ import CustomCamera from "./CustomCamera";
 
 ## Props Disponíveis
 
-| **Propriedade**       | **Tipo**                                   | **Descrição**                                                                                               | **Default**      | **Obrigatóriedade** 
+| **Propriedade**       | **Tipo**                                   | **Descrição**                                                                                               | **Default**      |
 |------------------------|--------------------------------------------|-----------------------------------------------------------------------------------------------------------|------------------|
 | `showDevices`          | `boolean`                                 | Exibe a lista de dispositivos de vídeo conectados.                                                        | `true`           |
 | `showErrors`           | `boolean`                                 | Exibe mensagens de erro relacionadas à câmera.                                                            | `true`           |
