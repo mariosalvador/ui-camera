@@ -1,5 +1,6 @@
 import { Sun } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export const NavBar = () => {
   return (
@@ -17,7 +18,9 @@ export const NavBar = () => {
           </div>
         </section>
         <nav className="flex items-center gap-5">
-          <GitHubIcon height="24" width="24" />
+          <Link href="https://github.com/mariosalvador/ui-camera" target="_blank" >
+            <GitHubIcon height="24" width="24" />
+          </Link>
           <Sun className="h-5.5 w-5.5 cursor-pointer" />
         </nav>
       </div>

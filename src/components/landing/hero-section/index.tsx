@@ -7,9 +7,7 @@ export const HeroSection = () => {
 
   return (
     <div className="w-full bg-gray-50 h-screen">
-
       <section className="flex flex-col items-center gap-8 pt-40  h-full">
-
         <article className="flex flex-col items-center">
           <h1 className="text-5xl font-bold animate-pulse">UI Camera for </h1>
           <h1 className="text-5xl font-bold  animate-pulse">React Web Aplication</h1>
