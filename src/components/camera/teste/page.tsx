@@ -7,7 +7,7 @@ export default function Teste() {
   const [getDevices, setDevices] = useState<MediaDeviceInfo[]>([]);
   const [getCapturedImage, setCapturedImage] = useState<string | null>(null);
 
-  const cameraRef = useRef<{ captureImage: () => void } | null>(null);
+  const cameraRef = useRef<{ captureImage: () => void; stopCamera?: () => void; } | null>(null);
 
   const handleCaptureImage = () => {
     if (cameraRef.current) {
@@ -20,6 +20,7 @@ export default function Teste() {
       <h1 className="text-2xl font-bold mb-4">Custom Camera Component - Test 1</h1>
       <CustomCamera
         ref={cameraRef}
+        showDevices={false}
         getAllVideoDevices={(devices: MediaDeviceInfo[]) => setDevices(devices)}
         getCapturedImage={(e: string | null) => setCapturedImage(e)}
         setCameraError={(e: string | null) => console.log("Ele:", e)}

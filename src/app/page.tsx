@@ -1,14 +1,9 @@
-import CustomCamera from "@/components/camera/camera";
-import { Teste2 } from "@/components/camera/test-2/page";
-import Teste from "@/components/camera/teste/page";
 
-export default function Camera() {
+export default function Landing() {
 
   return (
     <div>
-      <CustomCamera />
-      <Teste/>
-      <Teste2/>
+      Camera
     </div>
   )
 }
