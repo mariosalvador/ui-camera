@@ -15,22 +15,18 @@ import CustomCamera from "./CustomCamera";
 ---
 
 ## Props Disponíveis
-Aqui está a tabela atualizada com a obrigatoriedade de cada propriedade:
 
-## Props Disponíveis
+| **Propriedade**      | **Tipo**                             | **Obrigatório?** | **Descrição**                                                         | **Default** |   |   |   |
+| -------------------- | ------------------------------------ | ---------------- | --------------------------------------------------------------------- | ----------- | - | - | - |
+| `showDevices`        | `boolean`                            | Opcional (?)     | Exibe a lista de dispositivos de vídeo conectados.                    | `true`      |   |   |   |
+| `showErrors`         | `boolean`                            | Opcional (?)     | Exibe mensagens de erro relacionadas à câmera.                        | `true`      |   |   |   |
+| `getAllVideoDevices` | `(value: MediaDeviceInfo[]) => void` | Opcional (?)     | Callback que retorna todos os dispositivos de vídeo disponíveis.      | `undefined` |   |   |   |
+| `getCapturedImage`   | \`(value: null \| string) => void    | Opcional (?)     | Callback que retorna a imagem capturada no formato Base64.            | `undefined` |   |   |   |
+| `className`          | `string`                             | Opcional (?)     | Classe CSS para o contêiner principal.                                | `undefined` |   |   |   |
+| `videoClassName`     | `string`                             | Opcional (?)     | Classe CSS para o elemento `<video>`.                                 | `undefined` |   |   |   |
+| `errorClassName`     | `string`                             | Opcional (?)     | Classe CSS para mensagens de erro.                                    | `undefined` |   |   |   |
+| `setCameraError`     | \`(value: string \| null) => void\`  | Opcional (?)     | Callback para capturar erros ao acessar a câmera ou capturar imagens. | `undefined` |   |   |   |
 
-| **Propriedade**       | **Tipo**                                   | **Obrigatório?** | **Descrição**                                                                                               | **Default**      |
-|------------------------|--------------------------------------------|-------------------|-------------------------------------------------------------------------------------------------------------|------------------|
-| `showDevices`          | `boolean`                                 | Opcional (?)               | Exibe a lista de dispositivos de vídeo conectados.                                                        | `true`           |
-| `showErrors`           | `boolean`                                 | Opcional (?)               | Exibe mensagens de erro relacionadas à câmera.                                                            | `true`           |
-| `getAllVideoDevices`   | `(value: MediaDeviceInfo[]) => void`       | Opcional (?)               | Callback que retorna todos os dispositivos de vídeo disponíveis.                                           | `undefined`      |
-| `getCapturedImage`     | `(value: string | null) => void`           | Opcional (?)               | Callback que retorna a imagem capturada no formato Base64.                                                 | `undefined`      |
-| `className`            | `string`                                  | Opcional (?)               | Classe CSS para o contêiner principal.                                                                    | `undefined`      |
-| `videoClassName`       | `string`                                  | Opcional (?)               | Classe CSS para o elemento `<video>`.                                                                     | `undefined`      |
-| `errorClassName`       | `string`                                  | Opcional (?)               | Classe CSS para mensagens de erro.                                                                        | `undefined`      |
-| `setCameraError`       | `(value: string | null) => void`           | Opcional (?)               | Callback para capturar erros ao acessar a câmera ou capturar imagens.                                      | `undefined`      |
-
-Se precisar de mais ajustes ou algo adicional, é só pedir! 😊
 ---
 
 ## Funções Expostas via `ref`
