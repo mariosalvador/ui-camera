@@ -7,13 +7,18 @@ export const HeroSection = () => {
 
   return (
     <div className="w-full bg-gray-50 h-screen">
-      <section className="flex flex-col items-center gap-8 pt-40  h-full">
+      <section className="flex flex-col items-center gap-8 pt-44  h-full">
         <article className="flex flex-col items-center">
-          <h1 className="text-5xl font-bold animate-pulse">UI Camera for </h1>
-          <h1 className="text-5xl font-bold  animate-pulse">React Web Aplication</h1>
+          <h1 className="text-5xl font-bold animate-pulse">
+            UI Camera for
+          </h1>
+          <h1 className="text-5xl font-bold  animate-pulse">
+            React Web Aplication
+          </h1>
         </article>
         <article className="flex flex-col items-center">
-          <p className="text-center text-md ">Open source component built for <strong>React</strong>, <strong>Typescript</strong> and <strong>TailwindCSS</strong>
+          <p className="text-center text-md ">
+            Open source component built for <strong>React</strong>, <strong>Typescript</strong> and <strong>TailwindCSS</strong>
           </p>
           <p>Based in black and white theme</p>
         </article>

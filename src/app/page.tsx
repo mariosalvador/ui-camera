@@ -7,6 +7,9 @@ export default function Landing() {
     <div>
       <NavBar />
       <HeroSection/>
+      <div>
+        ola
+      </div>
     </div>
   )
 }
