@@ -4,7 +4,7 @@ import { ReactIcon, TailwindCSSIcon, TypescriptIcon } from "../Icon";
 
 export const HeroSection = () => {
   return (
-    <div className="w-full bg-gray-50 dark:bg-black h-screen">
+    <div className="w-full bg-gray-50 dark:bg-black h-screen shadow-md border-b ">
       <section className="flex flex-col items-center gap-8 pt-44 h-full">
         {/* Título */}
         <article className="flex flex-col items-center">
