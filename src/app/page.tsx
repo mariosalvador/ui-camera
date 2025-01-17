@@ -1,3 +1,4 @@
+import { Footer } from "@/components/landing/footer";
 import { HeroSection } from "@/components/landing/hero-section";
 import { NavBar } from "@/components/landing/nav-bar";
 
@@ -10,6 +11,7 @@ export default function Landing() {
       <div>
         ola
       </div>
+      <Footer/>
     </div>
   )
 }
