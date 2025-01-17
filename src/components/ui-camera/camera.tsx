@@ -21,6 +21,7 @@ interface CameraProps {
 const CustomCamera = forwardRef<{
   captureImage?: () => void;
   stopCamera?: () => void;
+  restartCamera?: () => void;
 }, CameraProps>(
   (
     {
@@ -75,36 +76,43 @@ const CustomCamera = forwardRef<{
 
     // Atualizar feed de vídeo ao trocar de dispositivo
     useEffect(() => {
-      const startCamera = async (deviceId: string) => {
-        try {
-          const stream = await navigator.mediaDevices.getUserMedia({
-            video: { deviceId: deviceId ? { exact: deviceId } : undefined },
-          });
-
-          if (videoRef.current) {
-            videoRef.current.srcObject = stream;
-            videoRef.current.play();
-            setError(null);
-          }
-        } catch (err) {
-          const startCameraError = "Erro ao iniciar a câmera. Verifique as permissões.";
-          setError(startCameraError);
-          setCameraError?.(startCameraError);
-          console.error("Error:", err);
-        }
-      };
-
       if (selectedDeviceId) {
         startCamera(selectedDeviceId);
       }
       return () => stopCamera();
-    }, [selectedDeviceId, setCameraError]);
+    }, [selectedDeviceId]);
+
+    const startCamera = async (deviceId: string) => {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({
+          video: { deviceId: deviceId ? { exact: deviceId } : undefined },
+        });
+
+        if (videoRef.current) {
+          videoRef.current.srcObject = stream;
+          videoRef.current.play();
+          setError(null);
+        }
+      } catch (err) {
+        const startCameraError = "Erro ao iniciar a câmera. Verifique as permissões.";
+        setError(startCameraError);
+        setCameraError?.(startCameraError);
+        console.error("Error:", err);
+      }
+    };
 
     const stopCamera = () => {
       if (videoRef.current?.srcObject) {
         const tracks = (videoRef.current.srcObject as MediaStream).getTracks();
         tracks.forEach((track) => track.stop());
         videoRef.current.srcObject = null;
+      }
+    };
+
+    const restartCamera = () => {
+      if (selectedDeviceId) {
+        stopCamera();
+        startCamera(selectedDeviceId);
       }
     };
 
@@ -140,6 +148,7 @@ const CustomCamera = forwardRef<{
     useImperativeHandle(ref, () => ({
       captureImage,
       stopCamera,
+      restartCamera,
     }));
 
     return (

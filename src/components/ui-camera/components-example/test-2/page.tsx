@@ -47,8 +47,8 @@ export const Teste2: React.FC = () => {
         getAllVideoDevices={handleGetAllVideoDevices}
         getCapturedImage={handleGetCapturedImage}
         setCameraError={handleSetCameraError}
-        className="px-5 bg-orange-600"
-        videoClassName="bg-violet-500"
+        className="px-5"
+        videoClassName="bg-black"
         errorClassName="error-message"
       />
       <div className="mt-4 flex gap-4">
