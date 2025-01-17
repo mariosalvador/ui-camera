@@ -11,7 +11,7 @@ export const HeroSection = () => {
           <h1 className="text-5xl font-bold animate-pulse text-gray-900 dark:text-gray-100 ">
             UI Camera for
           </h1>
-          <h1 className="text-5xl font-bold animate-pulse text-gray-900 dark:text-gray-100">
+          <h1 className="text-5xl text-center font-bold animate-pulse text-gray-900 dark:text-gray-100 ">
             React Web Application
           </h1>
         </article>

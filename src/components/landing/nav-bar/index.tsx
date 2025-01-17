@@ -10,7 +10,7 @@ export const NavBar = () => {
   return (
     <header className="supports-backdrop-blur:bg-background/90 sticky top-0 z-40 w-full bg-white dark:bg-zinc-900 backdrop-blur-lg shadow-sm px-5 py-2 border-b border-gray-200 dark:border-gray-700">
       <div className="flex items-center justify-between">
-        <section className="flex items-center gap-5">
+        <section className="flex items-center gap-2 lg:gap-5">
           <Image
             src="/ui-camera-white-mode-svg.svg"
             alt="Logo"
