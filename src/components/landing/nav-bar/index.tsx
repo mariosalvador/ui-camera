@@ -32,11 +32,15 @@ export const NavBar = () => {
           </div>
         </section>
         <nav className="flex items-center gap-5">
+
           <Link
             href="https://github.com/mariosalvador/ui-camera"
             target="_blank"
-            className="text-gray-800 hover:text-black dark:text-gray-200 dark:hover:text-white"
+            className="text-gray-800 hover:text-black dark:text-gray-200 dark:hover:text-white flex items-center gap-2 bg-gray-400/20 hover:bg-gray-400/40 transition-all rounded-full pl-2"
           >
+            <span>
+              code
+            </span>
             <GitHubIcon height="24" width="24" isBlackMode={theme === 'dark'} />
           </Link>
           <ThemeToggle />
