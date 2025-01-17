@@ -1,10 +1,10 @@
 import CustomCamera from "../../camera";
 
 
-export const DemoCameraOne = () => {
+export const DemoCameraTwo = () => {
   return (
     <div>
-      <CustomCamera showDevices={false} />
+      <CustomCamera />
     </div>
   );
 };

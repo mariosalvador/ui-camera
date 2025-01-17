@@ -155,7 +155,7 @@ const CustomCamera = forwardRef<{
       <div className={className}>
         {showDevices && (
           <select
-            className="w-full mb-4 border rounded p-2"
+            className="w-full mb-4 border rounded p-2 dark:text-black"
             onChange={(e) => setSelectedDeviceId(e.target.value)}
           >
             {devices.map((device) => (

@@ -2,6 +2,9 @@
 
 import { DemoCameraOne } from "@/components/ui-camera/demo-example/demo-1";
 import { CardContent } from "../card-content";
+import { DemoCameraTwo } from "@/components/ui-camera/demo-example/demo-2";
+import { DemoCameraThree } from "@/components/ui-camera/demo-example/demo-3";
+import { DemoCameraFour } from "@/components/ui-camera/demo-example/demo-4";
 
 export const MainContent = () => {
 
@@ -24,7 +27,17 @@ export const MainContent = () => {
             <DemoCameraOne/>
           </CardContent>
 
+          <CardContent>
+            <DemoCameraTwo/>
+          </CardContent>
 
+          <CardContent>
+            <DemoCameraThree/>
+          </CardContent>
+
+          <CardContent>
+            <DemoCameraFour/>
+          </CardContent>
         </div>
       </div>
     </main>
