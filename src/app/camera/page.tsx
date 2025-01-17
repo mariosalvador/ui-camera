@@ -1,5 +1,5 @@
 import CustomCamera from "@/components/ui-camera/camera";
-import { Teste2 } from "@/components/ui-camera/components-example/test-2/page";
+import { Teste2 } from "@/components/ui-camera/demo-example/test-2/page";
 // import Teste from "@/components/camera/teste/page";
 
 
