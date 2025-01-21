@@ -1,10 +1,22 @@
-import { ShimmerButton } from "@/components/ui/shimmer-button";
-import { ChevronRight } from "lucide-react";
+"use client"
 import { ReactIcon, TailwindCSSIcon, TypescriptIcon } from "../Icon";
 import DotPattern from "@/components/ui/dot-pattern";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
+import { GetStartedButton } from "./GetStartedButton";
+import { Modal } from "@/components/ui/modal"; // Importação do novo componente Modal
 
 export const HeroSection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="relative w-full bg-gray-50 dark:bg-black h-screen shadow-md border-b overflow-hidden">
       {/* Dot Pattern */}
@@ -40,15 +52,12 @@ export const HeroSection = () => {
         </article>
 
         {/* Botão */}
-        <ShimmerButton className="flex justify-between shadow-2xl px-2 py-3 rounded-[20px] w-max h-[40px] bg-white dark:bg-gray-800 dark:text-gray-100">
-          <span className="flex w-full justify-between text-md items-center gap-5 whitespace-pre-wrap leading-none tracking-tight">
-            Get started
-            <ChevronRight
-              size={16}
-              className="hover:animate-ping text-gray-700 dark:text-gray-300"
-            />
-          </span>
-        </ShimmerButton>
+        <GetStartedButton onClick={handleOpenModal} />
+
+        {/* Modal */}
+        {isModalOpen && (
+          <Modal onClose={handleCloseModal} />
+        )}
 
         {/* Ícones */}
         <article className="flex gap-5">
